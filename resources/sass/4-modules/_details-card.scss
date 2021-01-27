@@ -1,0 +1,22 @@
+.card-details {
+
+    margin-top: -120px;
+
+    .progress {
+        height: 0.7rem;
+    }
+
+    @include media-breakpoint-up(md) { 
+
+    }
+
+}
+
+.img-details {
+    filter:brightness(85%);
+}
+
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }

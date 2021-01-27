@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-md-5">
+<div class="container mt-md-5 mt-5">
   <div class="row justify-content-center">
     <div class="col col-lg-10">
       <h1 class="h1 text-left text-md-center">Search all superheroes and villains data from all universes.</h1>
@@ -13,17 +13,22 @@
 <div class="container py-4">
   <div class="row justify-content-center">
     <div class="col col-md-10 col-lg-6">
-      <div class="input-group input-group-lg mb-3 shadow bg-white rounded">
-        <input type="text" class="form-control" placeholder="Type name" aria-label="Type name" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+      <form action="{{ route('index')  }}" method="get" class="needs-validation">
+        <div class="input-group input-group-lg mb-3 shadow bg-white rounded">
+          <input type="text" class="form-control" name="s" placeholder="Type name" aria-label="Type name" aria-describedby="button-addon2" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container d-none">
   <div class="row justify-content-center">
 
     <div class="col-12 col-md-10 col-lg-6">
@@ -46,23 +51,30 @@
   </div>
 </div>
 
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-      @for ($i = 0; $i < 10; $i++)
-      <div class="col">
-        <div class="card mb-3 shadow">
-          <div class="card-img">
-            <img src="https://www.superherodb.com/pictures2/portraits/10/100/667.jpg" class="card-img" alt="Name">
+
+@if ($superheroes)
+  <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        @foreach ($superheroes as $superhero)
+          <div class="col">
+            <div class="card mb-3 shadow border-0">
+              <div class="card-img">
+                <img src="{{ $superhero['image']['url'] }}" class="card-img" alt="Name">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">{{ $superhero['name'] }}</h5>
+                <p class="card-text mb-0"><small class="text-muted">{{ $superhero['appearance']['gender'] }} - {{ $superhero['appearance']['race'] }}</small></p>
+                <p class="card-text mb-0">Superman/Batman #8 (May, 2004)</p>
+                <p class="mt-3"><a href="/details" class="stretched-link text-decoration-none">View details</a></p>
+              </div>
+            </div>
           </div>
-          <div class="card-body p-3">
-            <h5 class="card-title mb-0">Name</h5>
-            <p class="card-text mb-0"><small class="text-muted">Male</small></p>
-            <p class="card-text mb-0">Superman/Batman #8 (May, 2004)</p>
-          </div>
-        </div>
+        @endforeach
       </div>
-      @endfor
-    </div>
-</div>
+  </div>
+@else
+    I don't have any records!
+@endif
+
 
 @endsection

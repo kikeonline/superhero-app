@@ -10058,6 +10058,10 @@ h6, .h6 {
 }
 
 /* Base Styles -------------------- */
+*, *:after, *:before {
+  transition: all 0.3s ease;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10069,6 +10073,7 @@ h6, .h6 {
 
 .card {
   flex-direction: row;
+  border-radius: 10px;
 }
 .card .card-img {
   height: 130px;
@@ -10079,4 +10084,17 @@ h6, .h6 {
     height: 180px;
     width: auto;
   }
+}
+.card:hover {
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-details {
+  margin-top: -120px;
+}
+.card-details .progress {
+  height: 0.7rem;
+}
+.img-details {
+  filter: brightness(85%);
 }

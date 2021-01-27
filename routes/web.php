@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\IndexSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+
+    // $super_APIKEY = env('SUPER_APIKEY');
+    // $response = Http::get("https://superheroapi.com/api/" . $super_APIKEY . "/search/superman");
+
+    // dd($response->json());
+
+//     return view('index');
+
+// })->name('index');
+
+Route::get('/', [IndexSearchController::class, 'search'])->name('index');
+Route::view('/details', 'details');
 
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::view('/details', 'details');

@@ -2,22 +2,52 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        <img src="https://www.superherodb.com/pictures2/portraits/10/100/667.jpg" class="img-fluid img-details" alt="Name">
+        <div class="col-12">
+          <div class="card card-details mb-3 shadow border-0 text-center">
+            <div class="card-body p-3">
+              <h5 class="card-title mb-0">Name</h5>
+              <p class="card-text mb-0"><small class="text-muted">Male - Cyborg</small></p>
 
-      <div class="col">
-        <div class="card mb-3 shadow">
-          <div class="card-img">
-            <img src="https://www.superherodb.com/pictures2/portraits/10/100/667.jpg" class="card-img" alt="Name">
-          </div>
-          <div class="card-body p-3">
-            <h5 class="card-title mb-0">Name</h5>
-            <p class="card-text mb-0"><small class="text-muted">Male</small></p>
-            <p class="card-text mb-0">Superman/Batman #8 (May, 2004)</p>
+              <div class="row">
+                <div class="col-6">
+                  <p class="text-left mb-1 mt-3"><small>Intelligence: 75%</small></p>
+                  <div class="progress">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <p class="text-left mb-1 mt-3"><small>strength: 92%</small></p>
+                  <div class="progress">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <p class="text-left mb-1 mt-3"><small>speed: 90%</small></p>
+                  <div class="progress">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <p class="text-left mb-1 mt-3"><small>durability: 100%</small></p>
+                  <div class="progress">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <p class="text-left mb-1 mt-3"><small>power: 40%</small></p>
+                  <div class="progress">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="card-text text-left mt-4">Superman/Batman #8 (May, 2004)</p>
+            </div>
           </div>
         </div>
-      </div>
-
     </div>
 </div>
 
