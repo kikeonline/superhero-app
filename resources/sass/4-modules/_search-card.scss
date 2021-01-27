@@ -1,0 +1,23 @@
+.card {
+
+
+    flex-direction: row;
+
+    .card-img {
+        height: 130px;
+        width: auto;
+    }
+    @include media-breakpoint-up(md) { 
+        .card-img {
+            height: 180px;
+            width: auto;
+        }
+    }
+
+
+}
+
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }

@@ -2,7 +2,7 @@
 
 The Superhero App lets you search and view details of all superhero and villains from all universes. This is a PHP Assessment test built with Laravel 8.
 
-Yo can check the running deployed version at: kike.work/superhero-app
+You can check the running deployed version at: kike.work/superhero-app
 
 ### Dependencies:
 

@@ -1,9 +1,9 @@
 /* Typography Styles -------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 // Font Variables
-$playfair: 'Playfair Display', serif;
+$bebas: 'Bebas Neue', serif;
 
 //
 // Headings
@@ -12,21 +12,19 @@ $playfair: 'Playfair Display', serif;
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
+  font-family: $bebas;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
   color: $headings-color;
 }
 
 h1, .h1 { 
-    @include font-size($h1-font-size);
-    font-family: $playfair;
+  font-size: 2rem;
+  @include media-breakpoint-up(md) {
     font-size: 5rem;
-    line-height: 4.3rem;
+  }
 
-    color: $white;
 }
-
 h2, .h2 { @include font-size($h2-font-size); }
 h3, .h3 { @include font-size($h3-font-size); }
 h4, .h4 { @include font-size($h4-font-size); }

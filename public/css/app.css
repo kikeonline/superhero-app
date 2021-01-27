@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10023,16 +10023,18 @@ h3 {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
+  font-family: "Bebas Neue", serif;
   font-weight: 500;
   line-height: 1.2;
 }
 
 h1, .h1 {
-  font-size: 2.25rem;
-  font-family: "Playfair Display", serif;
-  font-size: 5rem;
-  line-height: 4.3rem;
-  color: white;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 5rem;
+  }
 }
 
 h2, .h2 {
@@ -10061,10 +10063,20 @@ h6, .h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  color: black;
-}
-
 .container {
   box-sizing: border-box;
+}
+
+.card {
+  flex-direction: row;
+}
+.card .card-img {
+  height: 130px;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .card .card-img {
+    height: 180px;
+    width: auto;
+  }
 }
