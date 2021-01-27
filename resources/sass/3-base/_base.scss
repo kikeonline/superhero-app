@@ -1,0 +1,9 @@
+/* Base Styles -------------------- */
+//*, *:after, *:before { transition: all .3s ease; }
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;  }
+
+// Paragraphs text color
+body { color: $black; }
+
+// Bootstrap 4 container fix in mobile
+.container {  box-sizing: border-box; }
