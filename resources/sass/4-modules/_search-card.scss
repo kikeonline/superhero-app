@@ -5,11 +5,15 @@
     .card-img {
         height: 130px;
         width: auto;
+
+        background-image: url('/img/placeholder.jpg');
+        background-position: center;
+        background-size: contain;
     }
     @include media-breakpoint-up(md) { 
         .card-img {
             height: 180px;
-            width: auto;
+            width: 135px;
         }
     }
 

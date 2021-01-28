@@ -10034,6 +10034,7 @@ h1, .h1 {
 @media (min-width: 768px) {
   h1, .h1 {
     font-size: 5rem;
+    line-height: 1;
   }
 }
 
@@ -10078,11 +10079,14 @@ h6, .h6 {
 .card .card-img {
   height: 130px;
   width: auto;
+  background-image: url("/img/placeholder.jpg");
+  background-position: center;
+  background-size: contain;
 }
 @media (min-width: 768px) {
   .card .card-img {
     height: 180px;
-    width: auto;
+    width: 135px;
   }
 }
 .card:hover {
