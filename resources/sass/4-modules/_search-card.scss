@@ -2,13 +2,21 @@
     flex-direction: row;
     border-radius: 10px;
 
+    background-color: #212121; 
+
     .card-img {
-        height: 130px;
+        height: 180px;
         width: auto;
 
         background-image: url('/img/placeholder.jpg');
         background-position: center;
         background-size: contain;
+    }
+
+    .progress {
+        height: 0.7rem;
+        background-color: #212121;
+        border: #d85555 solid 1px;
     }
     @include media-breakpoint-up(md) { 
         .card-img {
@@ -18,7 +26,28 @@
     }
 
     &:hover {
-        box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0.2rem 0.2rem 0rem #d85555 !important;
+
+        .myfilter:after{
+            position: absolute; content: ''; display: block; top: 0; left: 0; height: 100%; width: 100%;
+            background: rgba(191, 47, 47, 0);
+        }
+    }
+
+    
+    .myfilter{
+        position: relative;
+    }
+    
+    .myfilter:after{
+        position: absolute; content: ''; display: block; top: 0; left: 0; height: 100%; width: 100%;
+        background: rgb(191, 47, 47);
+        mix-blend-mode: multiply;
+
+        &:hover {
+            background: rgba(191, 47, 47, 0);
+            mix-blend-mode: multiply;
+        }
     }
 
 }

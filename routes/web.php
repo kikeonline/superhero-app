@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\DetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,8 @@ Route::get('/search/{query}', [SearchController::class, 'search']);
 Route::redirect('/search', '/');
 Route::post('/search', [SearchController::class, 'searchpost']);
 
-
-Route::view('/details', 'details');
+Route::get('/details/{id}', [DetailsController::class, 'details']);
+// Route::view('/details/{id}', 'details');
 
 Auth::routes();
 

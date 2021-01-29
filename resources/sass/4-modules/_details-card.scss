@@ -7,7 +7,12 @@
     }
 
     @include media-breakpoint-up(md) { 
+        margin-top: 0px;
+        background-color: transparent !important;
+    }
 
+    &:hover {
+        box-shadow: none !important;
     }
 
 }

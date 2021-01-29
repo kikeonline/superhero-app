@@ -1,0 +1,49 @@
+.input-search {
+
+    input {
+        border-bottom-left-radius: 50rem !important;
+        border-top-left-radius: 50rem !important;
+
+        background-color: #191919;
+        color: white;
+
+        border-right: 0;
+
+        &:focus {
+            color: white;
+            background-color: #191919;
+            border-color: #f0bdbd;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgb(216 85 85 / 25%);
+        }
+    }
+
+    button {
+        border-bottom-right-radius: 50rem !important;
+        border-top-right-radius: 50rem !important;
+
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+
+        border-color: #d85555 !important;
+        border-left: 0;
+        
+        padding: 8px 20px;
+        padding-top: 0px !important;
+
+        background-color: #191919;
+        color: white;
+
+        @include media-breakpoint-up(sm) { 
+            padding-right: 40px;
+            padding-left: 30px;
+         }
+    }
+
+
+}
+
+@include media-breakpoint-up(sm) {  }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }
