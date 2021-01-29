@@ -6,13 +6,13 @@
     <div class="row">
 
       <div class="col-12 p-0 col-md-5">
-        <img src="{{ $details['image']['url'] }}" class="img-fluid img-details rounded w-100" alt="Name">
+          <img src="@php if (@file_get_contents($details['image']['url'],0,NULL,0,1)) {echo $details['image']['url'];}else { echo asset('/img/placeholder.jpg');}@endphp" class="img-fluid img-details rounded w-100" alt="Name">
       </div>
 
         <div class="col-12 col-md-7">
           <div class="card card-details mb-3  border-0 text-center">
             <div class="card-body p-3">
-              <h2 class="card-title mb-0 mt-xl-5">{{ $details['name'] }}</h2>
+              <h1 class="card-title mb-0 mt-xl-5">{{ $details['name'] }}</h1>
               <span class="badge badge-outline badge-primary">{{ $details['biography']['publisher'] }}</span>
 
               <h4 class="text-left mb-0 mt-3">PowerStats</h4>

@@ -18,8 +18,6 @@ class SearchController extends Controller
 
         if ($search_query) {
 
-            // dd($search_query);
-
             $super_APIKEY = env('SUPER_APIKEY');
             $search_response = Http::get("https://superheroapi.com/api/" . $super_APIKEY . "/search/" . $search_query );
 

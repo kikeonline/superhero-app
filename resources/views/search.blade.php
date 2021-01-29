@@ -10,18 +10,22 @@
   </div>
 </div>
 
+{{-- SEARCH INPUT --}}
 @include('components/searchinput')
 
-
+{{-- RESULTS CARDS --}}
 @if ($superheroes)
   <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
         @foreach ($superheroes as $superhero)
           <div class="col">
             <div class="card mb-3 border-0">
-              <div class="card-img myfilter">
+
+
+              <div class="card-img filter">
                 <img src="{{ $superhero['image']['url'] }}" class="card-img" alt="{{ $superhero['name'] }}">
               </div>
+
               <div class="card-body p-3">
                 <h4 class="card-title mb-0">{{ $superhero['name'] }}</h4>
                 <p class="card-text mb-0"><small>{{ $superhero['appearance']['gender'] }} - {{ $superhero['appearance']['race'] }}</small></p>
@@ -31,12 +35,12 @@
                     <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $superhero['powerstats']['power'] }}%" aria-valuenow="{{ $superhero['powerstats']['power'] }}" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 @endif
-
                 @if ($superhero['biography']['publisher'] !== 'null')
                   <span class="badge badge-outline badge-primary mt-3"> {{ str_limit($superhero['biography']['publisher'], $limit = 15, $end = '...') }}</span>
                 @endif
                 <p><a href="/details/{{ $superhero['id'] }}" class="stretched-link"></a></p>
               </div>
+
             </div>
           </div>
         @endforeach
@@ -48,6 +52,7 @@
   <div class="container">
     <div class="row justify-content-center">
 
+    {{-- NO RESULTS FOUND --}}
     @if ($error_type == 'no results')
       <div class="col-12 text-center">
         <div class="alert pt-2 bg-black text-white border-0" role="alert">
@@ -59,6 +64,7 @@
       </div>
     @endif
 
+    {{-- API ERROR--}}
     @if ($error_type == 'API ERROR')
       <div class="col-12 col-md-10 col-lg-6">
         <div class="alert alert-danger shadow" role="alert">

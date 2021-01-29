@@ -3,19 +3,12 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-
 //====================================
 // Global Imports
 //====================================
 
-// 0 - Wordpress CSS 
-//@import '0-wordpress/index';
-
 // 1 - Import bootstrap framework
-// @import '1-frameworks/index';
+@import '~bootstrap/scss/bootstrap';
 
 // 2 - Import plugins
 @import '2-plugins/index';

@@ -28,18 +28,18 @@
     &:hover {
         box-shadow: 0.2rem 0.2rem 0rem #d85555 !important;
 
-        .myfilter:after{
+        .filter:after{
             position: absolute; content: ''; display: block; top: 0; left: 0; height: 100%; width: 100%;
             background: rgba(191, 47, 47, 0);
         }
     }
 
     
-    .myfilter{
+    .filter{
         position: relative;
     }
     
-    .myfilter:after{
+    .filter:after{
         position: absolute; content: ''; display: block; top: 0; left: 0; height: 100%; width: 100%;
         background: rgb(191, 47, 47);
         mix-blend-mode: multiply;

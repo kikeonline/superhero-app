@@ -18,20 +18,9 @@ class DetailsController extends Controller
                 'details' => $details
             ]);
         }
-        if ($search_response['response'] == 'error') {
-            if ($search_response['error'] == 'character with given name not found') {
-                return view('search', [
-                    'search_query' => $search_query,
-                    'superheroes' => false,
-                    'error_type' => 'no results'
-                ]);
-            } else {
-                return view('search', [
-                    'search_query' => $search_query,
-                    'superheroes' => false,
-                    'error_type' => 'API ERROR',
-                    'api_error' => $search_response['error']
-                ]);
+        if ($details['response'] == 'error') {
+            if ($details['error'] == 'invalid id') {
+                return view('errors.404');
             }
         }
 

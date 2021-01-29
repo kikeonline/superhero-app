@@ -2,6 +2,7 @@
 
 @section('content')
 
+{{-- PAGE NOT FOUND --}}
 <div class="container mt-md-5 mt-5">
   <div class="row justify-content-center">
     <div class="col-12 text-center">

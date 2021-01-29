@@ -10150,7 +10150,7 @@ h6, .h6 {
 .card:hover {
   box-shadow: 0.2rem 0.2rem 0rem #d85555 !important;
 }
-.card:hover .myfilter:after {
+.card:hover .filter:after {
   position: absolute;
   content: "";
   display: block;
@@ -10160,10 +10160,10 @@ h6, .h6 {
   width: 100%;
   background: rgba(191, 47, 47, 0);
 }
-.card .myfilter {
+.card .filter {
   position: relative;
 }
-.card .myfilter:after {
+.card .filter:after {
   position: absolute;
   content: "";
   display: block;
@@ -10174,7 +10174,7 @@ h6, .h6 {
   background: #bf2f2f;
   mix-blend-mode: multiply;
 }
-.card .myfilter:after:hover {
+.card .filter:after:hover {
   background: rgba(191, 47, 47, 0);
   mix-blend-mode: multiply;
 }
