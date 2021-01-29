@@ -15,6 +15,6 @@ You can check this app deployed at: https://superhero-app.kike.work
 
 1. `npm install`
 2. `composer install`
-3. Include your Superhero API KEY in .env with the name `SUPER_APIKEY`. 
-4. `php artisan serve`
-5. Visit http://localhost:8000 in your browser
+3. `npm run dev` or `npm run watch`
+4. Include your Superhero API KEY in .env in  the name variable `SUPER_APIKEY`. 
+5. `php artisan serve`

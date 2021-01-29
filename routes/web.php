@@ -16,17 +16,7 @@ use App\Http\Controllers\DetailsController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-
-Route::get('/search/{query}', [SearchController::class, 'search']);
-Route::redirect('/search', '/');
-Route::post('/search', [SearchController::class, 'searchpost']);
-
+Route::get('/', [App\Http\Controllers\SearchController::class, 'search'])->name('index');
 Route::get('/details/{id}', [DetailsController::class, 'details']);
-// Route::view('/details/{id}', 'details');
 
 Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

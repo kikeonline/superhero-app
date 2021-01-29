@@ -12,11 +12,13 @@ class SearchController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function search($query) {
+    public function search() {
 
-        $search_query = trim($query);
+        $search_query = request()->query('search');
 
-        if (!$search_query == "") {
+        if ($search_query) {
+
+            // dd($search_query);
 
             $super_APIKEY = env('SUPER_APIKEY');
             $search_response = Http::get("https://superheroapi.com/api/" . $super_APIKEY . "/search/" . $search_query );
@@ -27,6 +29,7 @@ class SearchController extends Controller
                     'superheroes' => $search_response['results']
                 ]);
             }
+
             if ($search_response['response'] == 'error') {
                 if ($search_response['error'] == 'character with given name not found') {
                     return view('search', [
@@ -46,17 +49,6 @@ class SearchController extends Controller
 
         } else {
             return view('index');
-        }
-
-    }
-    public function searchpost(Request $query) {
-
-        $query = trim($query->input('query'));
-        // dd($query);
-        if (!$query == "") {
-            return redirect('search/' . $query);
-        } else {
-            return redirect()->route('index');
         }
 
     }

@@ -18,7 +18,8 @@
 </head>
 <body class="bg-black">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-black shadow-sm">
+        <div class="background-image"></div>
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{asset('/img/icon.png')}}" alt="Logo" width="30" height="30" class="mr-2">

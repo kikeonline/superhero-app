@@ -1,10 +1,9 @@
 <div class="container py-4">
   <div class="row justify-content-center">
     <div class="col col-md-10 col-lg-6">
-      <form action="{{ route('index')  }}/search" method="post" class="needs-validation">
-        @csrf
+      <form action="{{ route('index')  }}" method="GET" class="needs-validation">
         <div class="input-group input-search input-group-lg mb-3 shadow">
-          <input type="text" class="form-control bg-grey border-primary" name="query" placeholder="Type superhero or villain name" value="{{ $search_query ?? '' }}" aria-label="Type name" aria-describedby="button-addon2" required>
+          <input type="text" class="form-control bg-grey border-primary" name="search" placeholder="Type superhero or villain name" value="{{ $search_query ?? '' }}" aria-label="Type name" aria-describedby="button-addon2" required>
           <div class="input-group-append">
             <button class="btn bg-grey" type="submit" id="button-addon2">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-white" viewBox="0 0 16 16">

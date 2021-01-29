@@ -1,0 +1,11 @@
+.background-image {
+    background-image: url('/img/bg.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100%;
+
+    position: absolute;
+}
