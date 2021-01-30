@@ -18,5 +18,6 @@ use App\Http\Controllers\DetailsController;
 
 Route::get('/', [App\Http\Controllers\SearchController::class, 'search'])->name('index');
 Route::get('/details/{id}', [DetailsController::class, 'details']);
+Route::redirect('/details', '/');
 
 Auth::routes();
